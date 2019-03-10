@@ -8,11 +8,12 @@ namespace PlayPlainBobDemo
     {
         static void Main(string[] args)
         {
-            PlainBob method = new PlainBob(4);
+            PlainBob method = new PlainBob(6);
             MethodTracker tracker = new MethodTracker(method);
 
             using (var striker = new Keyboard())
             {
+                striker.BaseNote = 80;
                 MethodRinger ringer = new MethodRinger(striker, tracker);
                 ringer.RingMethod();
             }
