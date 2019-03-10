@@ -3,7 +3,7 @@
 namespace Bells
 {
     /// <summary>
-    /// Represents a permutation of N bells.
+    /// Represents a permutation of a number of bells.
     /// </summary>
     public class Change : IEquatable<Change>
     {
@@ -63,7 +63,8 @@ namespace Bells
         {
             if (this.Count < transform.Count)
             {
-                throw new InvalidOperationException("A transform cannot be applied to a change smaller than it.");
+                throw new InvalidOperationException(
+                    "A transform cannot be applied to a change smaller than it.");
             }
 
             int[] change = new int[this.Count];
